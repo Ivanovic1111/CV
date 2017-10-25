@@ -1,0 +1,137 @@
+h1{
+	
+	font-size:40px;
+	padding-top:20px;
+	color:#40391D;
+}
+div#fixed {
+    display: flex;
+	text-align:justify;
+	margin-left:200px;
+	padding-left:50px;
+}
+div.relative {
+    display: flex;
+}
+/* Background Gradient for Triadic Colors */
+
+body {
+	color:#40391D;
+    background-color: #CF9BCF;
+    /* For WebKit (Safari, Chrome, etc) */
+    
+    background: #CF9BCF -webkit-gradient(linear, left top, left bottom, from(#FFE676), to(#B6C9FF)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    
+    background: #CF9BCF -moz-linear-gradient(top, ##FFE676, #B6C9FF) repeat-y;
+    /* IE 5.5 - 7 */
+    
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#DCF5F5, endColorstr=#CF9BCF) no-repeat;
+    /* IE 8 */
+    
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#DCF5F5, endColorstr=#DCF5F5)" no-repeat;
+
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;}
+.verticalLine {
+    border-left: thick solid #8DA7D8;
+    box-shadow: 0 0 15px 5px rgba(31, 73, 125, 0.8);
+}
+body > div.relative > section > article > div:nth-child(3){
+	margin-top:20px;
+}
+#header{
+	width:913px;
+}
+.indent{
+	float:center;
+	text-indent:24px;
+}
+
+#links img[src="https://image.flaticon.com/icons/svg/25/25231.svg"] (1){
+	margin-left:160px;
+	
+}
+#links img[src="linkedInicon.png"]{
+	margin-left:149px;
+}
+a{
+	
+	color:#40391D;
+}
+a[href*='Ivanovic1111']{
+	right:20px;
+}
+#links {
+	text-decoration:none;
+	Background:#40407F;
+	width:100px;
+	height:37px;
+}
+#nonsensewrap {
+  top: 50%;
+  left: 50%;
+}
+
+#wLinkedIn a {
+    display: inline-block;
+    color: #000 !important;
+    background: #fdfdfd; 
+    background: -webkit-linear-gradient(#fdfdfd, #eee);
+    background: -moz-linear-gradient(#fdfdfd, #eee);
+    background: -o-linear-gradient(#fdfdfd, #eee);
+    background: linear-gradient(#fdfdfd, #eee);
+    text-decoration: none;
+    font-size: 12px !important;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: inherit;
+    font-weight: bold;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+}
+
+#wLinkedIn a:hover {
+    opacity: 0.8;
+}
+
+#icon-bg {
+    display: inline-block;
+    background: #007bb6; 
+    background: -webkit-linear-gradient(#81bedb, #007bb6);
+    background: -moz-linear-gradient(#81bedb, #007bb6);
+    background: -o-linear-gradient(#81bedb, #007bb6);
+    background: linear-gradient(#81bedb, #007bb6);
+    color: #fff;
+    padding: 3px 5px 3px 5px;
+    border-radius: 3px;
+    border: 1px solid #3f7eb7;
+    font-size: 16px;
+    margin: -1px;
+}
+
+#icon-label-bg {
+    display: inline-block;
+    padding: 3px 5px 3px 5px;
+}
+input[type="button"]{
+	display: inline-block;
+    color: #000 !important;
+    background: #fdfdfd; 
+    background: -webkit-linear-gradient(#fdfdfd, #eee);
+    background: -moz-linear-gradient(#fdfdfd, #eee);
+    background: -o-linear-gradient(#fdfdfd, #eee);
+    background: linear-gradient(#fdfdfd, #eee);
+    text-decoration: none;
+    font-size: 12px !important;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: inherit;
+    font-weight: bold;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 1px;
+    width: 124px;
+    height: 22px;
+
+}
+input[type="button"]:hover{
+	opacity: 0.8;
+}
