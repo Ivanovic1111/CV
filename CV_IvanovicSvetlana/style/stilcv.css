@@ -1,5 +1,5 @@
 p>q{
-	margin-left:420px;
+	margin-left:460px;
 	padding:30px 20px;
 	color:#E82E23;
 }body > div:nth-child(2){
@@ -8,7 +8,8 @@ p>q{
 body{
 	
 font-family: 'Playfair Display', serif;
-
+letter-spacing:2px;
+color:#242424;
 
 }
 .inline  li{
