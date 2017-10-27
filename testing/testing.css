@@ -1,0 +1,38 @@
+ body {
+      position: relative; 
+	  font-family:"Trebuchet MS", Helvetica, sans-serif
+  }
+  #section1 {padding-top:50px;height:500px;color: #242424 ; background-color: #C3E3FA;}
+  #section2 {padding-top:50px;height:500px;color: #242424; background-color: #9AF1FA;}
+  #section41 {padding-top:50px;height:500px;color: #242424; background-color: #51C0FA;}
+  #section42 {padding-top:50px;height:500px;color: #242424; background-color: #1FB3FA;}
+  blockquote 
+  {  
+ #section41{
+  display:block;  }
+  body > nav > div > div.navbar-header > a > img{
+      padding-bottom:7px;  
+  }
+#myNavbar {
+	  background-color:#242424; 
+  }
+#myNavbar a
+{
+	  text-transform:uppercase;
+	  font-size:20px;
+	   padding-top:40px;
+  }
+#myNavbar a:hover 
+{
+     font-size:20px;
+     text-shadow:5px 5px 4px #4C94FA;
+  }
+  #section1 > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > p:nth-child(1){
+	  width:200px;
+	  height:auto;
+	  border:2px solid grey;
+  }
+	a[href^="https"]{
+	  text-decoration:none;
+	  color:black;
+  }
