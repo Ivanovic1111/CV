@@ -4,7 +4,7 @@ if(isset($_POST['Email_Address'])) {
 
 include 'lite_settings.php';
 
-if($email_to == "dragan.filipovic@yahoo.com") {
+if($email_to == "ivanovicsvetlana@yahoo.com") {
 die("This message is for the Webmaster. Please enter your email address into the file 'lite_settings.php'");
 }
 

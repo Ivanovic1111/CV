@@ -1,0 +1,73 @@
+    <!doctype>
+	<html>
+	<head>
+	<script src="kontakt_forma/lite_validation.js" type="text/javascript"></script>
+
+<script>
+	required.add('Full_Name','NOT_EMPTY','Full Name');
+	required.add('Email_Address','EMAIL','Email Address');
+	required.add('Your_Message','NOT_EMPTY','Your Message')
+</script>
+
+<link rel="stylesheet" type="text/css" href="kontakt_forma/lite_styles.css" />
+	
+	</head>
+
+	
+	<body>
+	
+	<div class="desna-kolona">
+
+<div id="kontakt_forma">
+	<form name="contactformlite" method="post" action="kontakt_forma/lite_process.php" onsubmit="return validate.check(this)">
+	<table width="480px" class="cflite">
+	<tr>
+	 <td colspan="2">
+	  <p style="text-align:center">Polja označena sa  <span class="required_star"> * </span> su obavezna </p>
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top" class="cflite_td">
+	  <label for="Full_Name" class="required">Ime<span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top" class="cflite_td">
+	  <input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width:250px" />
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top" class="cflite_td">
+	  <label for="Email_Address" class="required">Email adresa <span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top" class="cflite_td">
+	  <input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:250px" />
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top" class="cflite_td">
+	  <label for="Telephone_Number" class="not-required">Broj telefona </label>
+	 </td>
+	 <td valign="top" class="cflite_td">
+	  <input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width:250px" />
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top" class="cflite_td">
+	  <label for="Your_Message" class="required">Poruka<span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top" class="cflite_td">
+	  <textarea style="width:250px;height:120px" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
+	 </td>
+	</tr>
+	<tr>
+	 <td colspan="2" style="text-align:center"  class="cflite_td">
+	  <input type="submit" value=" Submit Form " />
+	 </td>
+	</tr>
+	</table>
+	</form>	
+</div>
+<!--  kraj .kontakt-forma -->    
+    </div>
+<!--  kraj .desna-kolona --> 
+</body>
+	</html>
