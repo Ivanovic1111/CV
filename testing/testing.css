@@ -1,6 +1,6 @@
 body {
   position: relative;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: 'Cantata One', serif;
 }
 
 #section1 {
@@ -102,4 +102,4 @@ blockquote {
   background: linear-gradient(to right, rgba(255,0,0,0), rgba(178,178,178,1));
  /*Standard*/;
 }
-}
+ 
