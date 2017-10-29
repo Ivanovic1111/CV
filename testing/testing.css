@@ -2,33 +2,50 @@ body {
   position: relative;
   font-family: 'Cantata One', serif;
   margin:0 auto;
-  background-color: #9AF1FA;!important
+    padding: 0px 0;!important;
 }
 
+/*Slova header*/
+
+.navbar-inverse .navbar-nav>li>a {
+    color:  #9CD99B;
+}
+.navbar-inverse .navbar-brand {
+    color: #9CD99B;
+}
+	.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color:#9CD99B;
+}
+/*==========================*/
 #section1 {
-  padding: 130px 0px;
+  padding: 0px 0px;
   color: #242424;
-  background-color: #C3E3FA;
   margin:0 auto;
 }
 
 #section2 {
-  padding-top: 50px;
-  color: #242424;
-  background-color: #9AF1FA;
+ padding-top: 50px;
+  color: #9CD99B;
+  /* background-color:#A1E0A0; */
 }
 
 #section41 {
+  font-family: 'Cinzel Decorative', cursive;
   padding-top: 50px;
   color: #242424;
-  background-color: #51C0FA;
+  background-color: #9FDE9E;
 }
 
 #section42 {
   padding-top: 50px;
-  color: #242424;
-  background-color: #1FB3FA;
+  color: #9CD99B;
 }
+ul{
+		list-style-type:none;!important;
+
+}
+
 
 #section41 {
   display: block;
@@ -39,20 +56,16 @@ body > nav > div > div.navbar-header > a > img {
 }
 
 #myNavbar {
-  background-color: Grey;
+  background-color:#212121;
 }
-
 #myNavbar a {
   text-transform: uppercase;
   font-size: 20px;
 }
-.navbar-inverse {
-    background-color: grey;
-    border-color: #080808;
-}
+
 
 #myNavbar a:hover {
-  color: #BDBDBD;
+  color: white;
   font-size: 20px;
   text-shadow: 0.5px 2px 0.5px  #D3D4B0;
 }
@@ -66,31 +79,29 @@ body > nav > div > div.navbar-header > a > img {
 a[href^="http"] {
   text-decoration: none;
   !important;
-	  color: black;
+	  color: #9CD99B
 }
 
 .navbar-brand {
-  padding: 0px 15px;
+  padding: 15px 15px;
   !important;
-    font-size: 18px;
+    font-size: 2em;
 }
 
-.navbar-inverse .navbar-nav>li>a {
-  color: #242424;
-}
-
+/*O testiranju */
 .blockquote-reverse, blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
   text-align: right;
-  border-top: 5px groove #BDBDBD;
-  border-right: 5px groove #BDBDBD;
+  border-top: 5px groove #9CD99B;
+  border-right: 5px groove #9CD99B;
 }
 
 blockquote {
+  font-family: 'Cinzel Decorative', cursive;
   padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 17.5px;
+  margin: 0 0px 20px;
+  font-size: 1.3em;
   border-left: 0px;
   !important;
 }
@@ -126,38 +137,161 @@ Korisni članci
 	margin-right:1,5%;
 	
 }
+
+/*=========================
+O testiranju >>> stil
+=========================*/
+#section41 > h1{
+	text-transform:uppercase;
+	font-family: 'Cinzel Decorative', cursive;
+
+	
+}
+
 /*=========================
 Read more >>> stil
 =========================*/
-#section1 > div > section:nth-child(1) > p > a	        {
-	color:pink;
-	background-color:black;
-	box-shadow: 10px 5px 5px #888888;
-	border:2px groove grey;
-	cursor:alias;
-}
+
 #section1 > div > section:nth-child(1) > p 
 {
 	margin-top:10%;
 }
-#section1 > div > section:nth-child(2) > p > a      {
-	color:pink;
-	background-color:black;
-	box-shadow: 10px 5px 5px #888888;
-	border:2px groove grey;
+
+#section1 > div > section:hover{
+		box-shadow: 1px 10px 7px #9CD99B;
+}
+.snip1544 {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #9CD99B;
+  cursor: pointer;
+  padding: 0px 40px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  line-height: 2.7em;
+  letter-spacing: 1.5px;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  font-size: 16px;
+  border: 3px solid #fff;
+  background-color: transparent;
+  border-radius: 0 15px 15px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.snip1544:before {
+  content: "";
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 35px 35px;
+  border-color: transparent transparent #47DEC9 transparent;
+  z-index: 1;
+}
+
+.snip1544:hover,
+.snip1544.hover {
+  border-color: #145529;
+}
+
+
+
+
+body {
+  background-color: #212121;
+  padding: 50px 0;
 }
 /*=========================
 Read more >>> margina
 =========================*/
-h3~p{
-	margin-top:10%;
-}
-#section1 > div > section:nth-child(3) > p > a{
-	color:pink;
-	background-color:black;
-	box-shadow: 10px 5px 5px #888888;
-	border:2px groove grey;
+h3{
+color:#145529;
+
 }
 h3~p{
 	margin-top:10%;
 }
+
+h3~p{
+	margin-top:10%;
+}
+
+.snip1544:before {
+    content: "";
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 35px 35px;
+    border-color: transparent transparent #145529 transparent;
+    z-index: 1;
+}
+
+
+/*========================
+Navigation bar
+=======================*/
+.snip1175 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.snip1175 * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+
+}
+.snip1175 li {
+
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0px ;
+  overflow: hidden;
+}
+.snip1175 a {
+	color:#9CD99B;
+  padding: 0 0.5em 0 0.2em;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.snip1175 a:before,
+.snip1175 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1175 a:before {
+  right: 100%;
+  display: block;
+  width: 3px;
+  height: 100%;
+  content: "";
+  background-color: #f39c12;
+}
+.snip1175 a:after {
+  padding: 0 0.5em 0 0.2em; 
+  position: absolute;
+  right: 100%;
+  top: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+.snip1175 li:hover a,
+.snip1175 .current a {
+  transform: translateX(20%);
+}
+
+
+	
