@@ -2,14 +2,16 @@ p>q{
 	margin-left:460px;
 	padding:30px 20px;
 	color:#E82E23;
-}body > div:nth-child(2){
+}
+body > div:nth-child(2){
 	margin:30px;
 }
 body{
-	
-font-family: 'Playfair Display', serif;
+font-family: 'Cantata One', serif;
+font-size:15px;
 letter-spacing:2px;
 color:#242424;
+line-height:30px;
 
 }
 .inline  li{
