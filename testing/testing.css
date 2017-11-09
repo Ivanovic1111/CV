@@ -4,23 +4,31 @@ body {
   margin:0 auto;
   padding: 0px 0;!important;
 }
+a{
+color:#145529;
+	
+}
+h3{
+color:#145529;
+
+}
 
 /*Slova header*/
 
 .navbar-inverse .navbar-nav>li>a {
-    color:  #9CD99B;
-}
-.navbar-inverse .navbar-brand {
     color: #9CD99B;
 }
+.navbar-inverse .navbar-brand {
+  color: #9CD99B;
+}
 	.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-    color: #fff;
-    background-color:#9CD99B;
+  color: #9CD99B;
+  background-color:#242421;
 }
 /*==========================*/
 #section1 {
   padding: 0px 0px;
-  color: #242424;
+  color: #fff;
   margin:0 auto;
 }
 
@@ -33,7 +41,7 @@ body {
 #section41 {
   font-family:'Cantata One', serif;
   padding-top: 50px;
-  color: #242424;
+  color: #fff;
   background-color: #9FDE9E;
 }
 
@@ -44,6 +52,9 @@ body {
 ul{
 list-style-type:none;!important;
 
+}
+header>h1{
+	color:#145529;
 }
 #section41 {
   display: block;
@@ -59,6 +70,7 @@ body > nav > div > div.navbar-header > a > img {
 #myNavbar a {
   text-transform: uppercase;
   font-size: 20px;
+
 }
 
 
@@ -117,7 +129,8 @@ blockquote {
     -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
     -moz-column-rule-width: 1px; /* Firefox */
     column-rule-width: 1px;
-	color:#fff;
+	color: #9CD99B;
+	margin-left:2em;
 }
 .list-group{
 	 column-count: 3;
@@ -261,7 +274,6 @@ Navigation bar
 
 }
 .snip1175 li {
-
   display: inline-block;
   list-style: outside none none;
   margin: 0px ;
@@ -338,7 +350,7 @@ Navigation bar
     -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
     -moz-column-rule-width: 1px; /* Firefox */
     column-rule-width: 1px;
-	color:#fff;	
+	color: #9CD99B;	
 	word-wrap: break-word;
 	margin:1em;
 
@@ -360,7 +372,7 @@ Navigation bar
     -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
     -moz-column-rule-width: 1px; /* Firefox */
     column-rule-width: 1px;
-	color:#fff;	
+	color:#9CD99B;
 	word-wrap: break-word;
 	margin:1em;
 
