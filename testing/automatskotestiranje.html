@@ -1,170 +1,155 @@
 <!DOCTYPE html>
 <html>
-<head>
-	  <title>Vezba flex </title>
-	  <meta charset="utf-8">
-	  <style>
-.font
-{
-font-family:'Cantata One', serif;
-background-color: #9CD99B;
-margin-top:20px;
-color:black;
- }
- p code{
- margin-left:30px;
- }
- code{
- margin-left:30px;
- }
- 
- h1,h2,h3,h4,h5,h6,p{
- margin-left:50px;
- }
-	  
-	  </style>
-</head>
-<body>
-<div class="font">
- <h1>Page Object Model - objašnjenje</h1>
-<h2>********  Page klase ********</h2>
-<p>Utils.java je klasa koja sadrži metode koje nam potvrđuju da se pojavio Alert , da li je neki element prisutan na stranici 
-i drugo.</p>
-
-<p>Korisna metoda koju pozivamo kada zelimo da potvrdimo da li je neki element prisutan na stranici</p>
-<div class="codeborder">
-<code>public static boolean isPresent(WebDriver webdriver, By selector) {</code>
-		
-	<code>	try {</code><br>
-	<code>		webdriver.findElement(selector);</code><br>
-	<code>	} catch (NoSuchElementException e) {</code><br>	
-	<code>		return false;</code><br>
-	<code>	}</code><br>
-	<code>	return true;</code><br>
-<code>	}</code><br>
-<p>Metoda koju pozivamo uglavnom kada čekamo neki button da bude klikabilan</p></code>
-<p><code>public static WebElement waitToBeClickable(WebDriver driver, By selector, int waitInterval) {</p></code>
-	<p><code>	WebElement element = (new WebDriverWait(driver, waitInterval)).until(ExpectedConditions.elementToBeClickable(selector));</p></code>
-	<p><code>	return element;</p></code>
-	<p><code>}</code></p>
-	<h3>Negativni testovi za login funkcionalnost</h3>
-	<p>Package deklaracija</p>
-	<p>package ispit</p>
-	
-	<h4>/*Importujemo sve zavisnosti*/</h4>
-<p><code>import static org.testng.Assert.assertEquals;</code></p>
-<p><code>import static org.testng.Assert.assertTrue;</code></p>
-<p><code>import java.util.concurrent.TimeUnit;</code></p>
-<p><code>import org.openqa.selenium.By;</code></p>
-<p><code>import org.openqa.selenium.Dimension;</code></p>
-<p><code>import org.openqa.selenium.WebDriver;</code></p>
-<p><code>import org.openqa.selenium.firefox.FirefoxDriver;</code></p>
-<p><code>import org.testng.annotations.BeforeMethod;</code></p>
-<p><code>import org.testng.annotations.Test;</code></p>
-
-<p><code>import junit.framework.Assert;</code></p>
-<p><code>import svetlana.minis.pages.InstitucijaOsnovniPage;</code></p>
-<p><code>import svetlana.minis.pages.LoginPage;</code></p>
-<p><code>import svetlana.minis.pages.MenuPage;</code></p>
-<p><code>import svetlana.minis.pages.SuccessModalPage;</code></p>
-
-<p><code>public class LoginNegativniTest {</code></p>
-<p>Metoda kojoj prosleđujemo određen broj karaktera</p>
-	<p><code>public static String getNCharacters(int n) {</code></p>
-	<p><code>	StringBuffer outputBuffer = new StringBuffer(n);</code></p>
-	<p><code>	for (int i = 0; i < n; i++) {</code></p>
-		<p><code>	outputBuffer.append("a");</code>
-	<p><code>	}</code></p>
-	<p><code>	return outputBuffer.toString();</code></p>
-	
-<p>Deklarišemo driver</p>
-	<p><code>private WebDriver driver;</code></p>
-	<p>Pravimo objekte od segmenata stranice - POM</p>
-	<p><code>private LoginPage loginPage;</code></p>
-	<p><code>private InstitucijaOsnovniPage instOsnovniPage;</code></p>
-	<p><code>private SuccessModalPage successModalPage;</code></p>
-	<p><code>private String baseUrl;</code></p>
-	<p><code>private MenuPage menuPage;</code></p>
-	
-	<p><code>@BeforeMethod</code></p>
-	<p><code>public void setupSelenium() {</code></p>
-	<p><code>	baseUrl = "http://localhost:8080/#/login";</code></p>
-		<p><code>driver = new FirefoxDriver();</code></p>
-		<p><code>driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);</code></p>
-		<p><code>driver.manage().window().setSize(new Dimension(1024, 768));</code></p>
-		<p><code>// driver.manage().window().maximize();</code></p>
-	<p><code>	driver.navigate().to(baseUrl);</code></p>
-        <p>Instanciramo objekte - loginPage, menuPage i sl.</p>
-		<p><code>loginPage = new LoginPage(driver);</code></p>
-		<p><code>instOsnovniPage = new InstitucijaOsnovniPage(driver);</code></p>
-		<p><code>successModalPage = new SuccessModalPage(driver);</code></p>
-		<p><code>menuPage = new MenuPage(driver);</code></p>
-	<p><code>	// loginPage.login("djura@djuraminis.com", "adminvinca");</code></p>
-	<p><code>}</code></p>
-
-	<p><code>// Negativni testovi za login</code></p>
-
-<p><code>	@Test</code></p>
-	<p><code>// login bez username-a</code></p>
-	<p><code>public void loginWithoutUsername() {</code></p>
-	<p><code>	loginPage.login("", "adminvinca");</code></p>
-	<p><code>	// Potvrdjujemo da je button Prijavi se - Disabled.</code></p>
-	<p><code>	Assert.assertFalse(loginPage.getSignInBtn().isEnabled());</code></p>
-	<p><code>}</code></p>
-
-<p><code>	// Login without password</code></p>
-<p><code>	@Test</code></p>
-<p><code>	public void loginWithoutPassword() {</code></p>
-	<p><code>	loginPage.login("djura@djuraminis", "");</code></p>
-	<p><code>	//  Asserting that Button is Disabled.</code></p>
-	<p><code>assertFalse - asserting something to be false </code></p>
-	
-	<p><code>	Assert.assertFalse(loginPage.getSignInBtn().isEnabled());</code></p>
-	<p><code>}</code></p>
-
-<p><code>	// Prazno polje passworda i username</code></p>
-<p><code>	@Test</code></p>
-<p><code>	public void loginWithEmptyPasswordAndEmptyUsername() {</code></p>
-	<p><code>	loginPage.login("", "");</code></p>
-	<p><code>	// Potvrdjujemo da je button Prijavi se - Disabled.</code></p>
-	<p><code>	Assert.assertFalse(loginPage.getSignInBtn().isEnabled());</code></p>
-	<p><code>	Assert.assertTrue(loginPage.getCancelBtn().isDisplayed());</code></p>
-	<p><code>}</code></p>
-
-<p><code>	// Testiramo unos praznog polja username, ocekujemo da je dugme prijavi se</code></p>
-<p><code>	// disabled</code></p>
-<p><code>	// Prazno polje username</code></p>
-<p><code>	@Test</code></p>
-<p><code>	public void loginPasswordLenght() {</code></p>
-<p><code>		loginPage.setUserName(getNCharacters(0));</code></p>
-<p><code>		loginPage.setPassword(getNCharacters(3000));
-	<p><code>	Assert.assertFalse(loginPage.getSignInBtn().isEnabled());</code></p>
-<p><code>}</code></p>
-
-<p><code>	@Test</code></p>
-<p><code>	public void usernameShouldNotHaveSymbolsInTheField() {</code></p>
-<p><code>		loginPage.login("@@@@@@@@@@@@@@@@", "adminvinca");</code></p>
-<p><code>		Assert.assertTrue(loginPage.getLogError().getText().contains("Pogrešno korisničko ime ili lozinka!"));</code></p>
-<p><code>	}</code></p>
-
-	<p><code>public void loginWithoutUsernameMsgError() {</code></p>
-	<p><code>	// assertEquals(baseUrl , driver.getCurrentUrl());</code></p>
-	<p><code>	assertTrue(loginPage.getUserName().isDisplayed());</code></p>
-	<p><code>	assertTrue(loginPage.getPassword().isDisplayed());</code></p>
-	<p><code>	assertTrue(loginPage.getSignInBtn().isDisplayed());</code></p>
-	<p><code>	loginPage.setUserName("abcd");</code></p>
-	<p><code>	loginPage.getUserName().clear();</code></p>
-	<p><code>	String expectedMessage = "Korisničko ime obavezno";</code></p>
-	<p><code>	Assert.assertEquals(expectedMessage, loginPage.getUsernameError().getText());</code></p>
-	<p><code>}</code></p>
-
-	<p><code>public void loginWithoutPasswordErrorMsg() {</code></p>
-	<p><code>	loginPage.setPassword("Sifra");</code></p>
-	<p><code>	loginPage.getPassword().clear();</code></p>
-	<p><code>	Assert.assertTrue(loginPage.getPasswordError().getText().contains("Pogrešna lozinka"));</code></p>
-	<p><code>}</code></p>
-<p><code>}</code></p>
-
-</div>
-</body>
+    <head>
+        <title>Vezba flex </title>
+        <meta charset="utf-8">
+        <style>
+            .font
+            {
+            font-family:'Cantata One', serif;
+            background-color: #9CD99B;
+            margin-top:20px;
+            color:black;
+            }
+            p code{
+            margin-left:30px;
+            }
+            code{
+            margin-left:30px;
+            }
+            h1,h2,h3,h4,h5,h6,p{
+            margin-left:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="font">
+        <h1>Page Object Model - objašnjenje</h1>
+        <h2>********  Page klase ********</h2>
+        <p>Utils.java je klasa koja sadrži metode koje nam potvrđuju da se pojavio Alert , da li je neki element prisutan na stranici 
+            i drugo.
+        </p>
+        <p>Korisna metoda koju pozivamo kada zelimo da potvrdimo da li je neki element prisutan na stranici</p>
+        <div class="codeborder">
+            <code>public static boolean isPresent(WebDriver webdriver, By selector) {</code>
+            <code>	try {</code><br>
+            <code>		webdriver.findElement(selector);</code><br>
+            <code>	} catch (NoSuchElementException e) {</code><br>	
+            <code>		return false;</code><br>
+            <code>	}</code><br>
+            <code>	return true;</code><br>
+            <code>	}</code><br>
+            <p>Metoda koju pozivamo  kada čekamo button da bude clickable</p>
+            </code>
+            <p><code>public static WebElement waitToBeClickable(WebDriver driver, By selector, int waitInterval) {</p>
+            </code>
+            <p><code>	WebElement element = (new WebDriverWait(driver, waitInterval)).until(ExpectedConditions.elementToBeClickable(selector));</p>
+            </code>
+            <p><code>	return element;</p>
+            </code>
+            <p><code>}</code></p>
+            <h3>Negativni testovi za login funkcionalnost</h3>
+            <p>Package deklaracija</p>
+            <p>package ispit</p>
+            <h4>/*Importujemo sve zavisnosti*/</h4>
+            <p><code>import static org.testng.Assert.assertEquals;</code></p>
+            <p><code>import static org.testng.Assert.assertTrue;</code></p>
+            <p><code>import java.util.concurrent.TimeUnit;</code></p>
+            <p><code>import org.openqa.selenium.By;</code></p>
+            <p><code>import org.openqa.selenium.Dimension;</code></p>
+            <p><code>import org.openqa.selenium.WebDriver;</code></p>
+            <p><code>import org.openqa.selenium.firefox.FirefoxDriver;</code></p>
+            <p><code>import org.testng.annotations.BeforeMethod;</code></p>
+            <p><code>import org.testng.annotations.Test;</code></p>
+            <p><code>import junit.framework.Assert;</code></p>
+            <p><code>import svetlana.minis.pages.InstitucijaOsnovniPage;</code></p>
+            <p><code>import svetlana.minis.pages.LoginPage;</code></p>
+            <p><code>import svetlana.minis.pages.MenuPage;</code></p>
+            <p><code>import svetlana.minis.pages.SuccessModalPage;</code></p>
+            <p><code>public class LoginNegativniTest {</code></p>
+            <p>Metoda kojoj prosleđujemo određen broj karaktera<br>Veoma korisna metoda kada testiramo input polja</p>
+            <p><code>public static String getNCharacters(int n) {</code></p>
+            <p><code>	StringBuffer outputBuffer = new StringBuffer(n);</code></p>
+            <p><code>	for (int i = 0; i < n; i++) {</code></p>
+            <p><code>	outputBuffer.append("a");</code>
+            <p><code>	}</code></p>
+            <p><code>	return outputBuffer.toString();</code></p>
+            <p><code>private WebDriver driver;</code></p>
+            <p>Pravimo objekte od segmenata stranice - POM</p>
+            <p><code>private LoginPage loginPage;</code></p>
+            <p><code>private InstitucijaOsnovniPage instOsnovniPage;</code></p>
+            <p><code>private SuccessModalPage successModalPage;</code></p>
+            <p><code>private String baseUrl;</code></p>
+            <p><code>private MenuPage menuPage;</code></p>
+            <p><code>@BeforeMethod</code></p>
+            <p><code>public void setupSelenium() {</code></p>
+            <p><code>	baseUrl = "http://localhost:8080/#/login";</code></p>
+            <p><code>driver = new FirefoxDriver();</code></p>
+            <p><code>driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);</code></p>
+            <p><code>driver.manage().window().setSize(new Dimension(1024, 768));</code></p>
+            <p><code>// driver.manage().window().maximize();</code></p>
+            <p><code>	driver.navigate().to(baseUrl);</code></p>
+            <p>Instanciramo objekte - loginPage, menuPage i sl.</p>
+            <p><code>loginPage = new LoginPage(driver);</code></p>
+            <p><code>instOsnovniPage = new InstitucijaOsnovniPage(driver);</code></p>
+            <p><code>successModalPage = new SuccessModalPage(driver);</code></p>
+            <p><code>menuPage = new MenuPage(driver);</code></p>
+            <p><code>	// loginPage.login("djura@djuraminis.com", "adminvinca");</code></p>
+            <p><code>}</code></p>
+            <p><code>// Negativni testovi za login</code></p>
+            <p><code>	@Test</code></p>
+            <p><code>// login bez username-a</code></p>
+            <p><code>public void loginWithoutUsername() {</code></p>
+            <p><code>	loginPage.login("", "adminvinca");</code></p>
+            <p><code>	// Potvrdjujemo da je button Prijavi se - Disabled.</code></p>
+            <p><code>	Assert.assertFalse(loginPage.getSignInBtn().isEnabled());</code></p>
+            <p><code>}</code></p>
+            <p><code>	// Login without password</code></p>
+            <p><code>	@Test</code></p>
+            <p><code>	public void loginWithoutPassword() {</code></p>
+            <p><code>	loginPage.login("djura@djuraminis", "");</code></p>
+            <p><code>	//  Asserting that Button is Disabled.</code></p>
+            <p><code>assertFalse - asserting something to be false </code></p>
+            <p><code>	Assert.assertFalse(loginPage.getSignInBtn().isEnabled());</code></p>
+            <p><code>}</code></p>
+            <p><code>	// Prazno polje passworda i username</code></p>
+            <p><code>	@Test</code></p>
+            <p><code>	public void loginWithEmptyPasswordAndEmptyUsername() {</code></p>
+            <p><code>	loginPage.login("", "");</code></p>
+            <p><code>	// Potvrdjujemo da je button Prijavi se - Disabled.</code></p>
+            <p><code>	Assert.assertFalse(loginPage.getSignInBtn().isEnabled());</code></p>
+            <p><code>	Assert.assertTrue(loginPage.getCancelBtn().isDisplayed());</code></p>
+            <p><code>}</code></p>
+            <p><code>	Testiramo unos praznog polja username, ocekujemo da je dugme --> prijavi se</code></p>
+            <p><code>	disabled</code></p>
+            <p><code>	// Prazno polje username</code></p>
+            <p><code>	@Test</code></p>
+            <p><code>	public void loginPasswordLenght() {</code></p>
+            <p><code>		loginPage.setUserName(getNCharacters(0));</code></p>
+            <p><code>		loginPage.setPassword(getNCharacters(3000));
+            <p><code>	Assert.assertFalse(loginPage.getSignInBtn().isEnabled());</code></p>
+            <p><code>}</code></p>
+            <p><code>	@Test</code></p>
+            <p><code>	public void usernameShouldNotHaveSymbolsInTheField() {</code></p>
+            <p><code>		loginPage.login("@@@@@@@@@@@@@@@@", "adminvinca");</code></p>
+            <p><code>		Assert.assertTrue(loginPage.getLogError().getText().contains("Pogrešno korisničko ime ili lozinka!"));</code></p>
+            <p><code>	}</code></p>
+            <p><code>public void loginWithoutUsernameMsgError() {</code></p>
+            <p><code>	// assertEquals(baseUrl , driver.getCurrentUrl());</code></p>
+            <p><code>	assertTrue(loginPage.getUserName().isDisplayed());</code></p>
+            <p><code>	assertTrue(loginPage.getPassword().isDisplayed());</code></p>
+            <p><code>	assertTrue(loginPage.getSignInBtn().isDisplayed());</code></p>
+            <p><code>	loginPage.setUserName("abcd");</code></p>
+            <p><code>	loginPage.getUserName().clear();</code></p>
+            <p><code>	String expectedMessage = "Korisničko ime obavezno";</code></p>
+            <p><code>	Assert.assertEquals(expectedMessage, loginPage.getUsernameError().getText());</code></p>
+            <p><code>}</code></p>
+            <p><code>public void loginWithoutPasswordErrorMsg() {</code></p>
+            <p><code>	loginPage.setPassword("Sifra");</code></p>
+            <p><code>	loginPage.getPassword().clear();</code></p>
+            <p><code>	Assert.assertTrue(loginPage.getPasswordError().getText().contains("Pogrešna lozinka"));</code></p>
+            <p><code>}</code></p>
+            <p><code>}</code></p>
+        </div>
+    </body>
 </html>

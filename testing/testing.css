@@ -2,7 +2,7 @@ body {
   position: relative;
   font-family: 'Cantata One', serif;
   margin:0 auto;
-    padding: 0px 0;!important;
+  padding: 0px 0;!important;
 }
 
 /*Slova header*/
@@ -45,8 +45,6 @@ ul{
 list-style-type:none;!important;
 
 }
-
-
 #section41 {
   display: block;
 }
@@ -106,12 +104,29 @@ blockquote {
   !important;
 }
  
-#para {
-  background-image:
-    radial-gradient{
-      white,
-     #9AF1FA
-    };
+#para{
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+	color:#fff;
+}
+.list-group{
+	 column-count: 3;
+	 padding:2%;
+}
+#section2 > div > div:nth-child(1) > p > img{
+	width:90%;
+	margin 0 auto;
+	max-width:400px;
 }
 a{
 cursor: pointer;}
@@ -156,7 +171,7 @@ Read more >>> stil
 }
 
 #section1 > div > section:hover{
-		box-shadow: 1px 10px 7px #9CD99B;
+    box-shadow: 1px 10px 7px #9CD99B;
 }
 .snip1544 {
   font-family: 'Roboto', Arial, sans-serif;
@@ -196,8 +211,6 @@ Read more >>> stil
 .snip1544.hover {
   border-color: #145529;
 }
-
-
 
 
 body {
@@ -255,7 +268,7 @@ Navigation bar
   overflow: hidden;
 }
 .snip1175 a {
-	color:#9CD99B;
+  color:#9CD99B;
   padding: 0 0.5em 0 0.2em;
   position: relative;
   display: inline-block;
@@ -289,6 +302,69 @@ Navigation bar
 .snip1175 li:hover a,
 .snip1175 .current a {
   transform: translateX(20%);
+}
+@media screen and (max-width: 600px) {
+#para{
+		
+   -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+    column-gap: 20px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+	color:#fff;	
+    margin:1em;
+
+}
+}
+@media screen and (max-width: 500px) {
+#para{
+		
+   -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    -webkit-column-gap: 10px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 10px; /* Firefox */
+    column-gap: 10px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+	color:#fff;	
+	word-wrap: break-word;
+	margin:1em;
+
+}
+}
+
+@media screen and (max-width: 500px) {
+.list-group{
+
+   -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    -webkit-column-gap: 10px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 10px; /* Firefox */
+    column-gap: 10px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+	color:#fff;	
+	word-wrap: break-word;
+	margin:1em;
+
+}
 }
 
 
