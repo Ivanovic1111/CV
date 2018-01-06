@@ -315,6 +315,7 @@ Navigation bar
 .snip1175 .current a {
   transform: translateX(20%);
 }
+
 @media screen and (max-width: 600px) {
 #para{
 		
@@ -334,7 +335,7 @@ Navigation bar
     margin:1em;
 
 }
-}
+
 @media screen and (max-width: 500px) {
 #para{
 		
@@ -353,6 +354,7 @@ Navigation bar
 	color: #9CD99B;	
 	word-wrap: break-word;
 	margin:1em;
+
 
 }
 }

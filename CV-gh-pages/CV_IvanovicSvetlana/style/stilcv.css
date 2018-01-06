@@ -1,0 +1,84 @@
+p>q{
+	margin-left:460px;
+	padding:30px 20px;
+	color:#E82E23;
+}
+h1{
+	margin-top:82px!important;
+padding:30px;
+}
+body{
+font-family: 'Cantata One', serif;
+font-size:15px;
+letter-spacing:2px;
+color:#242424;
+line-height:30px;
+
+}
+.inline  li{
+	display:inline-block;
+
+}
+ul {
+    width:100%;
+    height:20px;
+    text-align:center;
+}
+
+.info {
+text-align:center;
+width:800px;
+margin:20px auto;
+
+}
+div.info{
+		color:#7F7968;
+}
+/*Mobile icon*/
+body > header > ul > li:nth-child(4) > div > img{
+	text-align:center;
+}
+/*email*/
+body > ul > li:nth-child(3) > a > img{
+		text-align:center;
+
+}
+body > ul > li:nth-child(3) > a{
+	text-decoration:none;
+	color:#242424;
+    margin-right:13px;
+
+}
+body > ul > li:nth-child(2) > a > img{
+		text-align:center;
+		margin-right:19px;
+}
+body > ul > li:nth-child(1) > a > img{
+		text-align:center;
+		margin-right:13px;
+}
+body section{
+	margin:20px 20px;
+	text-align:center;
+}
+h3{
+	text-align:center;
+	
+
+}
+.red{
+	color:#E82E23;
+}
+/* github icon */
+body > header > ul > li:nth-child(1) > a > img:hover{
+	
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+body > header > ul > li:nth-child(2) > a > img:hover{
+	    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+body > header > ul > li:nth-child(3){
+		margin-bottom:3%;
+
+}
